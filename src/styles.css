@@ -1,6 +1,7 @@
 :root {
   --main-font: "Poppins", sans-serif;
   --light-color: whitesmoke;
+  --medium-color: #d2dadb;
   --dark-color: rgb(44, 61, 64);
 }
 
@@ -81,6 +82,22 @@ main h3 {
   text-align: center;
 }
 
+main h4 {
+  color: var(--dark-color);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+main h5 {
+  color: var(--dark-color);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
 main p {
   color: var(--dark-color);
   font-size: 16px;
@@ -93,6 +110,11 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
+}
+
+section.secondary {
+  background: var(--medium-color);
+  max-width: 1400px;
 }
 
 footer {
@@ -140,10 +162,32 @@ footer a:hover {
   opacity: 1;
 }
 
-.garlic {
-  max-width: 60px;
+.btn {
+  background-color: var(--dark-color);
+  color: var(--light-color);
   display: block;
-  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card {
+  background-color: var(--light-color);
+  border-radius: 15px;
+  margin: 30px 0;
+}
+
+.card-body {
+  padding: 32px;
+}
+
+.card-footer {
+  padding: 20px;
 }
 
 .container {
@@ -151,9 +195,16 @@ footer a:hover {
   margin: 0 auto;
 }
 
+.garlic {
+  max-width: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
 .grid {
   display: grid;
   grid-gap: 70px;
+  padding: 15px;
 }
 
 .grid-3-col-with-1-narrow {
@@ -163,7 +214,13 @@ footer a:hover {
   grid-template-columns: 1fr 1fr;
 }
 
+.grid-3-even-col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .img-responsive {
+  border-radius: 15px;
+  display: block;
   max-width: 100%;
   margin-top: 40px;
 }
