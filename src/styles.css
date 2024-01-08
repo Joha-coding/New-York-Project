@@ -1,6 +1,7 @@
 :root {
   --main-font: "Poppins", sans-serif;
-  --dark-color: #2c3d40;
+  --light-color: whitesmoke;
+  --dark-color: rgb(44, 61, 64);
 }
 
 body {
@@ -8,17 +9,12 @@ body {
   background-color: var(--dark-color);
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
     url("../images/heroNY.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  color: var(--light-color);
   padding: 200px 0;
   text-align: center;
 }
@@ -46,7 +42,7 @@ header h3 {
 }
 
 header a {
-  background: white;
+  background: var(--light-color);
   color: var(--dark-color);
   display: inline-block;
   font-weight: 700;
@@ -60,7 +56,72 @@ header a {
   text-transform: uppercase;
 }
 
-@media (max-width: 900px) {
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer {
+  color: var(--light-color);
+  background-image: linear-gradient(
+      rgba(44, 61, 64, 0.8),
+      rgba(44, 61, 64, 0.8)
+    ),
+    url("../images/footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+footer h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+footer p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 0.8;
+}
+footer ul {
+  padding: 0;
+}
+
+footer li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer a {
+  color: var(--light-color);
+  opacity: 0.7;
+}
+
+footer a:hover {
+  color: var(--light-color);
+  opacity: 1;
+}
+
+.garlic {
+  max-width: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+@media (max-width: 960px) {
   header {
     padding: 60px 0;
   }
@@ -74,5 +135,9 @@ header a {
   }
   header h3 {
     font-size: 14px;
+  }
+
+  .garlic {
+    max-width: 35px;
   }
 }
